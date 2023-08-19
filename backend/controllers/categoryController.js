@@ -3,21 +3,6 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const Category=require("../models/category.js");
 const ErrorHandler = require("../utils/errorhander");
 
-// exports.getCategory = catchAsyncErrors(async(req,res,next)=>{
-//     // const category=[];
-//     const product = await Product.findById(req.params.id);
-//     if (!product) {
-//         return next(new ErrorHander("Product not found", 404));
-//     }
-
-//     const category=product.category;
-
-//     res.status(200).json({
-//         success: true,
-//         category
-//       });
-    
-// })
 
 exports.createCategory = catchAsyncErrors(async(req,res,next)=>{
   
